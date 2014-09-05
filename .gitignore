@@ -136,6 +136,7 @@ modules/pscleaner
 modules/referralprogram
 modules/sendtoafriend
 modules/watermark
+modules/fictional
 admin-dev/themes/default/bower_components
 
 # ignore module config files
