@@ -143,3 +143,5 @@ admin-dev/themes/default/bower_components
 modules/*/config.xml
 # ignore language specific module config files
 modules/*/config_*.xml
+/admin5360/
+/modules.txt
