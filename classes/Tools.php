@@ -1017,7 +1017,7 @@ class ToolsCore
 	* @param boolean $linkOntheLastItem Put or not a link on the current category
 	* @param string [optionnal] $categoryType defined what type of categories is used (products or cms)
 	*/
-	public static function getPath($id_category, $path = '', $link_on_the_item = false, $category_type = 'products', Context $context = null)
+	public static function getPath($id_category, $path = '', $link_on_the_item = true, $category_type = 'products', Context $context = null)
 	{
 		if (!$context)
 			$context = Context::getContext();
@@ -1057,9 +1057,9 @@ class ToolsCore
 				foreach ($categories as $category)
 				{
 					$full_path .=
-					(($n < $n_categories || $link_on_the_item) ? '<a href="'.Tools::safeOutput($context->link->getCategoryLink((int)$category['id_category'], $category['link_rewrite'])).'" title="'.htmlentities($category['name'], ENT_NOQUOTES, 'UTF-8').'">' : '').
-					htmlentities($category['name'], ENT_NOQUOTES, 'UTF-8').
-					(($n < $n_categories || $link_on_the_item) ? '</a>' : '').
+					(($n < $n_categories || $link_on_the_item) ? '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.Tools::safeOutput($context->link->getCategoryLink((int)$category['id_category'], $category['link_rewrite'])).'" title="'.htmlentities($category['name'], ENT_NOQUOTES, 'UTF-8').'" itemprop="url">' : '').
+					(($n < $n_categories || $link_on_the_item)?'<span itemprop="title">':'').htmlentities($category['name'], ENT_NOQUOTES, 'UTF-8').(($n < $n_categories || $link_on_the_item)?'</span>':'').
+					(($n < $n_categories || $link_on_the_item) ? '</a></span>' : '').
 					(($n++ != $n_categories || !empty($path)) ? '<span class="navigation-pipe">'.$pipe.'</span>' : '');
 				}
 
