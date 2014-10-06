@@ -58,7 +58,7 @@
         .sf-menu > li span.active:after {
           content: "\f068"; } }
   .sf-menu > li > a {
-    font: 600 18px/22px "Open Sans", sans-serif;
+    font: bold 16px/20px "Marta", sans-serif;
     text-transform: uppercase;
     color: #484848;
     display: block;

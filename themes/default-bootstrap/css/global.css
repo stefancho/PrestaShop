@@ -16,7 +16,8 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font: inherit;
-  font-size: 100%;
+  font-size: 100.5%;
+  font-family: Tahoma, Arial, sans-serif;
   vertical-align: baseline; }
 
 html {
@@ -3810,6 +3811,23 @@ td.visible-print {
  *  Twitter: http://twitter.com/davegandy
  *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
  */
+ 
+@font-face 
+{
+	font-family: 'Marta';
+	src: url("../font/Marta_Regular.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face 
+{
+	font-family: 'Marta';
+	src: url("../font/Marta_Bold.otf");
+	font-weight: bold;
+	font-style: normal;
+}
+
+
 /* FONT PATH
  * -------------------------- */
 @font-face {
@@ -6019,7 +6037,7 @@ table.table_block td {
       #home-page-tabs > li {
         width: 100%; } }
     #home-page-tabs > li a {
-      font: 600 21px/24px "Open Sans", sans-serif;
+      font: 500 16px/20px "Marta", sans-serif;
       color: #555454;
       text-transform: uppercase;
       border: none;
